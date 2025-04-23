@@ -1,4 +1,4 @@
-public class Pheromone implements NestField, Runnable {
+public class Pheromone extends NestField implements Runnable {
 
     @Override
     public void run() {

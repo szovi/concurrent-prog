@@ -1,4 +1,4 @@
-public class Empty implements NestField {
+public class Empty extends NestField {
 
     @Override
     public String toString() {

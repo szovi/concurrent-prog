@@ -1,4 +1,4 @@
-public class Nutrition implements NestField, Runnable {
+public class Nutrition extends NestField implements Runnable {
 
     @Override
     public void run() {

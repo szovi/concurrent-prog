@@ -1,4 +1,4 @@
-public class Ant implements NestField, Runnable {
+public class Ant extends NestField implements Runnable {
 
     private int nutritionLevel;
 
@@ -8,7 +8,8 @@ public class Ant implements NestField, Runnable {
 
     @Override
     public void run() {
-        //ant logic
+
+
     }
 
     @Override
