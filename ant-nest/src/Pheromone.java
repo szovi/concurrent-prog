@@ -1,4 +1,5 @@
-public class Pheromone extends NestField implements Runnable {
+public class Pheromone extends BaseNestFieldThread {
+
 
     @Override
     public void run() {
@@ -9,4 +10,6 @@ public class Pheromone extends NestField implements Runnable {
     public String toString() {
         return "P";
     }
+
+
 }

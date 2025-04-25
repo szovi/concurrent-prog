@@ -1,17 +1,8 @@
-public abstract class NestField {
-
-    protected Position position;
+public interface NestField {
 
     public abstract String toString();
 
-    public Position getPosition() {
-        return this.position;
-    }
-
-    public NestField setPosition(Position position) {
-        this.position = position;
-
-        return this;
-    }
+    public Position getPosition();
+    public void setPosition(Position position);
 
 }

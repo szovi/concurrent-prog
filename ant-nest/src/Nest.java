@@ -44,10 +44,15 @@ public class Nest {
         for (int i = 0; i < nestFields.length; i++) {
             for (int j = 0; j < nestFields[i].length; j++) {
                 if (i == 0 || i == nestFields.length - 1 || j == 0 || j == nestFields[i].length - 1) {
-                    nestFields[i][j] = (new Wall()).setPosition(new Position(i, j));
-                    continue;
+
+                    NestField element = new Wall();
+                    element.setPosition(new Position(i, j));
+                    nestFields[i][j] = element;
+                } else {
+                    NestField element = new Empty();
+                    element.setPosition(new Position(i, j));
+                    nestFields[i][j] = element;
                 }
-                nestFields[i][j] = (new Empty()).setPosition(new Position(i, j));
             }
         }
     }
@@ -69,7 +74,7 @@ public class Nest {
 
                 System.out.println(this);
             } else {
-                scheduler.shutdown(); // Leállítjuk a scheduler-t ha elértük a limitet
+                scheduler.shutdown();
             }
         }, 0, DEFAULT_DELAY, TimeUnit.MILLISECONDS);
     }
@@ -77,7 +82,7 @@ public class Nest {
     private void placeRandomNestFieldItem(NestField element) {
         int row, col;
         do {
-            // +1 because of walls, -2 to avoid walls
+            //coz of walls
             row = 1 + random.nextInt(nestFields.length - 2);
             col = 1 + random.nextInt(nestFields.length - 2);
         } while (!(nestFields[row][col] instanceof Empty));

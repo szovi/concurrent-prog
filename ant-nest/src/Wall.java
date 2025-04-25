@@ -1,4 +1,4 @@
-public class Wall extends NestField {
+public class Wall extends BaseNestField {
 
 
     @Override

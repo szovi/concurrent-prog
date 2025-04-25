@@ -1,4 +1,4 @@
-public class Empty extends NestField {
+public class Empty extends BaseNestField {
 
     @Override
     public String toString() {

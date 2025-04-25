@@ -1,4 +1,4 @@
-public class Ant extends NestField implements Runnable {
+public class Ant extends BaseNestFieldThread {
 
     private int nutritionLevel;
 
